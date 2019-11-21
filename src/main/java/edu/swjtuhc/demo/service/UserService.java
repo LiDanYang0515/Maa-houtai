@@ -1,5 +1,7 @@
 package edu.swjtuhc.demo.service;
 
-public class UserService {
+import edu.swjtuhc.demo.model.Sysuser;
 
+public interface UserService {
+ public int register(Sysuser user);
 }

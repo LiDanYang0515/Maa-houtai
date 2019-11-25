@@ -1,5 +1,9 @@
 package edu.swjtuhc.demo.mapper;
 
-public interface UserMapper {
+import edu.swjtuhc.demo.model.Sysuser;
 
+public interface UserMapper {
+	public int insertUser(Sysuser user);
+
+	//public void register(Sysuser user);
 }

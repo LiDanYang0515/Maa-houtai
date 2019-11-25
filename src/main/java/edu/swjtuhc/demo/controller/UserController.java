@@ -1,5 +1,9 @@
 package edu.swjtuhc.demo.controller;
 
+
+
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,9 +20,9 @@ import edu.swjtuhc.demo.service.UserService;
 public class UserController {
     @Autowired
     UserService userService;
-    
+    //注册
     @RequestMapping("register")
-    public ModelAndView rigister(HttpServletRequest request,@RequestParam("password") String password,Sysuser user) {
+    public ModelAndView register(HttpServletRequest request,@RequestParam("password") String password,Sysuser user) {
     	//获取参数
     	String username = request.getParameter("username");
     	System.out.println(username);
@@ -45,13 +49,27 @@ public class UserController {
 		}
     	return mav;
     }
+    //登陆
     @RequestMapping("/login")
-    public String login() {
-    	//获取参数
+    	public ModelAndView login(HttpServletRequest request,@RequestParam("username")String username,@RequestParam("password") String password){
+    	//获取参数	
+    	List<Sysuser> sysuser = UserService.findByusernameAndpassword(username,password);
+    	System.out.println(username);
+    	System.out.println(password);
+    	
+    	request.getSession();
+    	request.getRequestURI();
+    	ModelAndView success = new ModelAndView();
+    	
     	//调用srevice处理逻辑
+    	if (sysuser.size()>0) {
+			success.setViewName("恭喜！登陆成功");
+		}else {
+			success.setViewName("用户名或密码错误");
+		}
+    
     	//响应/返回视图
     	
-    	return null;
+    	return success;
     }
-    
 }

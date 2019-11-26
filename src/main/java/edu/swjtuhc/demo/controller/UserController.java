@@ -18,7 +18,7 @@ public class UserController {
     UserService userService;
     
     @RequestMapping("register")
-    public ModelAndView rigister(HttpServletRequest request,@RequestParam("password") String password,Sysuser user) {
+    public ModelAndView register(HttpServletRequest request,@RequestParam("password") String password,Sysuser user) {
     	//获取参数
     	String username = request.getParameter("username");
     	System.out.println(username);

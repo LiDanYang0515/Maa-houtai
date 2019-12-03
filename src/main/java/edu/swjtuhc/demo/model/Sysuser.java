@@ -7,6 +7,32 @@ public class Sysuser {
 	private String name;
 	private int age;
 	private String gender;
+	private String image;
+	private String fileName;
+	private String userCode;
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
+	public String getFileName() {
+		return fileName;
+	}
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+
+	public String getUserCode() {
+		return userCode;
+	}
+
+	public void setUserCode(String userCode) {
+		this.userCode = userCode;
+	}
 
 	public int getU_id() {
 		return u_id;
@@ -55,5 +81,4 @@ public class Sysuser {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-
 }

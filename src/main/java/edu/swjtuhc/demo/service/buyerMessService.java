@@ -4,6 +4,9 @@ import edu.swjtuhc.demo.model.BuyerMess;
 
 public interface buyerMessService {
 
-	Integer updatePhotoUrl(BuyerMess buyerMess);
+	static Integer updatePhotoUrl(BuyerMess buyerMess) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

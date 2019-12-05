@@ -11,7 +11,7 @@ import net.sf.json.JSONObject;
 @Mapper
 public interface UserMapper {
 	//添加
-	public JSONObject insertUser(Sysuser user);
+	public int insertUser(Sysuser user);
 	//根据密码和名字查询数据库
 	public List<Sysuser> findByusernameAndpassword(@Param("userName") String userName, @Param("userPassWord") String userPassWord);
 	//根据名字查数据库

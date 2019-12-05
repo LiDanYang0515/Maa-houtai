@@ -17,8 +17,15 @@ public class UserServiceImpl implements UserService{
 private UserMapper userMapper;
 
 @Override
-public JSONObject register(Sysuser user) {
-	return userMapper.insertUser(user);
+public int  register(Sysuser user) {
+	Sysuser user1 = (Sysuser) userMapper.findByusername(user.getUsername());
+	int i = -1;
+	if (user1==null) {
+		i = userMapper.insertUser(user);
+	}else {
+		i= 2;
+	}
+	return i;
 	// TODO Auto-generated method stub
 }
 @Override

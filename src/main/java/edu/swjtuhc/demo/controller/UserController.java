@@ -27,49 +27,13 @@ public class UserController {
     UserService userService;
     //注册
     @RequestMapping("/register")
-    @ResponseBody
-    public JSONObject register(HttpServletRequest request,Sysuser user) {
-    	//获取参数
-//    	String username = request.getParameter("username");
-//    	System.out.println(user.getUsername());
-//    	System.out.println(user.getPassword());
-//    	System.out.println(user.getName());
+    public JSONObject register(@RequestBody Sysuser user) {
     	
-//    	request.getSession();
-//    	request.getRequestURI();
-    	
-    	//调用service处理逻辑
-    	//int i = userService.register(user);
-    	//响应/返回视图
-    	//纯view
-    	//model and view
-    	//基于JSP
-    	//返回JSON
-//    	ModelAndView mav = new ModelAndView();
-//    	mav.setViewName("success");
     	JSONObject result = new JSONObject();
-    	result.put("code", 0);
-    	result.put("data", null);
-    	result.put("msg","注册失败！账号和密码不能为空！");
-    	if (user.getUsername()==null||user.getPassword()==null) {
-			return result;
-		}
-    	List<Sysuser> sysuer=userService.findByusername(user.getUsername());
-    	if (sysuer.size()!=0){
-            result.put("code",0);
-            result.put("data",sysuer.size());
-            result.put("msg","已有此用户名，请更换");
-            return result;
-        }
-    	JSONObject i = userService.register(user);
-    	if(i==null){
-            return result;
-        }else {
-        result.put("code",1);
-        result.put("data",result);
-        result.put("message","注册成功");
-        return result;
-        }
+    	//调用service层
+    	int i=userService.register(user);
+    	result.put("msg", 1);
+		return result;
     }
     //登陆
     @RequestMapping("/login")

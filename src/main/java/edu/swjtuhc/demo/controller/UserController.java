@@ -66,4 +66,7 @@ public class UserController {
     	//响应/返回视图
    
     }
+    public static void main(String[] args) {
+		
+	}
 }

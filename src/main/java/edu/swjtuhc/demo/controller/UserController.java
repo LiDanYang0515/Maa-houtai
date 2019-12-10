@@ -32,41 +32,55 @@ public class UserController {
     	JSONObject result = new JSONObject();
     	//调用service层
     	int i=userService.register(user);
-    	result.put("msg", 1);
+    	result.put("state", i);
 		return result;
     }
     //登陆
     @RequestMapping("/login")
-    @ResponseBody
-    	public JSONObject login(HttpServletRequest request,@RequestParam("username")String username,@RequestParam("password") String password){
-    	//获取参数	
-    	List<Sysuser> sysuser = userService.findByusernameAndpassword(username,password);
-//    	System.out.println(username);
-//    	System.out.println(password);
+    public JSONObject login(@RequestBody Sysuser user) {
     	
-//    	request.getSession();
-//    	request.getRequestURI();
-    	JSONObject success = new JSONObject();
-    	if (username==null||password==null) {
-			return success;
-		}
-    	//调用srevice处理逻辑
-    	if (sysuser.size()>0) {
-			success.put("code", 0);
-			success.put("data", null);
-			success.put("msg", "没有此用户");
-			return success;//失败
-		}else {
-			success.put("code",1);
-	        success.put("data",sysuser);
-	        success.put("message","登陆成功");
-	        return success; //成功
-		}
-    
-    	//响应/返回视图
-   
+    	JSONObject result = new JSONObject();
+    	//调用service层
+    	int i=userService.register(user);
+    	result.put("state", 1);
+		return result;
     }
-    public static void main(String[] args) {
-		
-	}
+    //头像上传
+//    @RequestMapping("/avatar")
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+//    @RequestMapping("/login")
+//    @ResponseBody
+//    	public JSONObject login(HttpServletRequest request,@RequestParam("username")String username,@RequestParam("password") String password){
+//    	//获取参数	
+////    	List<Sysuser> sysuser = userService.findByusernameAndpassword(username,password);
+//    	JSONObject success = new JSONObject();
+//    	if (username==null||password==null) {
+//			return success;
+//		}
+//    	//调用srevice处理逻辑
+//    	if (sysuser.size()>0) {
+//			success.put("code", 0);
+//			success.put("data", null);
+//			success.put("msg", "没有此用户");
+//			return success;//失败
+//		}else {
+//			success.put("code",1);
+//	        success.put("data",sysuser);
+//	        success.put("message","登陆成功");
+//	        return success; //成功
+//		}
+//    
+//    	//响应/返回视图
+//   
+//    }
+   
 }

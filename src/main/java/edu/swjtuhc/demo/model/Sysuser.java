@@ -7,7 +7,6 @@ public class Sysuser {
 	private String name;
 	private String gender;
 	private int age;
-
 	private String avatar;
 	public int getUserId() {
 		return userId;
@@ -59,16 +58,8 @@ public class Sysuser {
 	@Override
 	public String toString() {
 		return "Sysuser [userId=" + userId + ", username=" + username + ", password=" + password + ", name=" + name
-				+ ", gender=" + gender + ", age=" + age + ", avatar=" + avatar + ", getUserId()=" + getUserId()
-				+ ", getUsername()=" + getUsername() + ", getPassword()=" + getPassword() + ", getName()=" + getName()
-				+ ", getAge()=" + getAge() + ", getGender()=" + getGender() + ", getAvatar()=" + getAvatar()
-				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
-				+ "]";
+				+ ", gender=" + gender + ", age=" + age + ", avatar=" + avatar + "]";
 	}
-	
-	
-	
-
 
 	
 	

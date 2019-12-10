@@ -1,24 +1,19 @@
 package edu.swjtuhc.demo.serviceImpl;
 
-import java.util.List;
-
-import javax.annotation.Resource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import edu.swjtuhc.demo.mapper.UserMapper;
 import edu.swjtuhc.demo.model.Sysuser;
 import edu.swjtuhc.demo.service.UserService;
-import net.sf.json.JSONObject;
+
 @Service
 public class UserServiceImpl implements UserService{
 @Autowired
-private UserMapper userMapper;
-
+UserMapper userMapper;
 @Override
 public int  register(Sysuser user) {
-	Sysuser user1 = (Sysuser) userMapper.findByusername(user.getUsername());
+	Sysuser user1 =  userMapper.findByusername(user.getUsername());
 	int i = -1;
 	if (user1==null) {
 		i = userMapper.insertUser(user);
@@ -29,16 +24,10 @@ public int  register(Sysuser user) {
 	// TODO Auto-generated method stub
 }
 @Override
-public List<Sysuser> findByusernameAndpassword(String username, String password) {
+public int login(Sysuser user) {
 	// TODO Auto-generated method stub
-	
-	
-	return userMapper.findByusernameAndpassword(username,password);
+	return 0;
 }
 
-@Override
-public List<Sysuser> findByusername(String username) {
-	// TODO Auto-generated method stub
-	return userMapper.findByusername(username);
-}
+
 }

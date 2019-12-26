@@ -29,9 +29,7 @@ public int  register(Sysuser user) {
 }
 
 @Override
-<<<<<<< HEAD
-public Sysuser findByusernameAndpassword(String username, String password) {
-=======
+
 public int login(Sysuser user) {
 	Sysuser u1 = userMapper.findByusernameAndpassword(user.getUsername(),user.getPassword());
 	int i = -1;
@@ -42,22 +40,8 @@ public int login(Sysuser user) {
 	}else {
 		i=3;
 	}
->>>>>>> branch 'master' of https://github.com/LiDanYang0515/Maa-houtai.git
-	// TODO Auto-generated method stub
-<<<<<<< HEAD
-	return null;
-=======
 	return i;
->>>>>>> branch 'master' of https://github.com/LiDanYang0515/Maa-houtai.git
 }
 
-<<<<<<< HEAD
-@Override
-public Sysuser findByusername(String username) {
-	// TODO Auto-generated method stub
-	return null;
-}
-=======
->>>>>>> branch 'master' of https://github.com/LiDanYang0515/Maa-houtai.git
 
 }

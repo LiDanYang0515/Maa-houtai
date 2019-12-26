@@ -27,7 +27,9 @@ public int  register(Sysuser user) {
 	return i;
 	// TODO Auto-generated method stub
 }
+
 @Override
+
 public int login(Sysuser user) {
 	Sysuser u1 = userMapper.findByusernameAndpassword(user.getUsername(),user.getPassword());
 	int i = -1;
@@ -38,7 +40,6 @@ public int login(Sysuser user) {
 	}else {
 		i=3;
 	}
-	// TODO Auto-generated method stub
 	return i;
 }
 

@@ -12,7 +12,7 @@ public class Sysuser {
 	
 	public int getUserId() {
 		return userId;
-	}
+	} 
 
 	
 

@@ -28,17 +28,17 @@ public int  register(Sysuser user) {
 	return i;
 	// TODO Auto-generated method stub
 }
+
 @Override
-public List<Sysuser> findByusernameAndpassword(String username, String password) {
+public Sysuser findByusernameAndpassword(String username, String password) {
 	// TODO Auto-generated method stub
-	
-	
-	return userMapper.findByusernameAndpassword(username,password);
+	return null;
 }
 
 @Override
-public List<Sysuser> findByusername(String username) {
+public Sysuser findByusername(String username) {
 	// TODO Auto-generated method stub
-	return userMapper.findByusername(username);
+	return null;
 }
+
 }

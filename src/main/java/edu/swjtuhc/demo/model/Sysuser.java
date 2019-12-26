@@ -11,7 +11,7 @@ public class Sysuser {
 	private String avatar;
 	public int getUserId() {
 		return userId;
-	}
+	} 
 
 	public void setUserId(int userId) {
 		this.userId = userId;

@@ -1,5 +1,7 @@
 package edu.swjtuhc.demo.model;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class Sysuser {
 	private int userId;
 	private String username;
@@ -7,10 +9,12 @@ public class Sysuser {
 	private String name;
 	private String gender;
 	private int age;
-	private String avatar;
+	
 	public int getUserId() {
 		return userId;
 	}
+
+	
 
 	public void setUserId(int userId) {
 		this.userId = userId;
@@ -48,20 +52,13 @@ public class Sysuser {
 		this.gender = gender;
 	}
 
-	public String getAvatar() {
-		return avatar;
-	}
-	public void setAvatar(String avatar) {
-		this.avatar = avatar;
-	}
+
 
 	@Override
 	public String toString() {
 		return "Sysuser [userId=" + userId + ", username=" + username + ", password=" + password + ", name=" + name
-				+ ", gender=" + gender + ", age=" + age + ", avatar=" + avatar + "]";
+				+ ", gender=" + gender + ", age=" + age + "]";
 	}
-
-	
 	
 }
 

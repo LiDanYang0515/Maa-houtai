@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import edu.swjtuhc.demo.model.Sysuser;
@@ -25,6 +26,7 @@ import net.sf.json.JSONObject;
 public class UserController {
     @Autowired
     UserService userService;
+   
     //注册
     @RequestMapping("/register")
     public JSONObject register(@RequestBody Sysuser user) {
@@ -41,12 +43,12 @@ public class UserController {
     	
     	JSONObject result = new JSONObject();
     	//调用service层
-    	int i=userService.register(user);
-    	result.put("state", 1);
+    	int i=userService.login(user);
+    	result.put("state", i);
 		return result;
     }
-    //头像上传
-//    @RequestMapping("/avatar")
+
+   
     
     
     

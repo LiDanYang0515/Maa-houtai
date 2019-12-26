@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.swjtuhc.demo.mapper.ItineraryMapper">
+	<insert id="insertin" parameterType="edu.swjtuhc.demo.model.Itinerary">
+		insert into itinerary
+		(date,text)
+		values
+		(#{creat_Date},#{textString})
+	</insert>
+	<select id="selectItineraryBycreate_Date" parameterType="java.sql.Date" resultType="edu.swjtuhc.demo.model.Itinerary">
+		select * from itinerary
+		where
+		date = #{create_Date}
+	</select>
+</mapper>

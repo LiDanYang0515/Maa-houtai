@@ -1,7 +1,5 @@
 package edu.swjtuhc.demo.controller;
 
-
-
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;

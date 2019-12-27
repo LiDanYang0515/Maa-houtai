@@ -13,5 +13,7 @@ import edu.swjtuhc.demo.model.Article;
 public interface ArticleService {
 	//插入数据
 	public int write(Article article);
+    //删除数据
+	public int delWrite(Article article);
 }
 

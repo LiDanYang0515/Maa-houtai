@@ -10,7 +10,7 @@ import edu.swjtuhc.demo.service.ArticleService;
 import net.sf.json.JSONObject;
 
 @RestController
-//@RequestMapping("/write")
+@RequestMapping("/article")
 public class ArticleController {
 	@Autowired
 	ArticleService articleService;
@@ -20,7 +20,7 @@ public class ArticleController {
 		JSONObject result = new JSONObject();
 		int i=articleService.write(article);
 		result.put("state", i);
-		return null;
+		return result;
 		
 		
 	}

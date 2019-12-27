@@ -42,6 +42,4 @@ public int login(Sysuser user) {
 	}
 	return i;
 }
-
-
 }

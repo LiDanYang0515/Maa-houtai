@@ -24,4 +24,10 @@ public class ArticleServiceImpl implements ArticleService {
 		return i;
 		
 	}
+	public int delWrite(Article articleID) {
+		int i = -1;
+		i=articleMapper.deleteArticle(articleID);
+		// TODO Auto-generated method stub
+		return i;
+	}
 }

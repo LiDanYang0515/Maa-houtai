@@ -3,15 +3,14 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="edu.swjtuhc.demo.mapper.ScheduleMapper">
+<resultMap type="edu.swjtuhc.demo.model.Schedule" id="schedule_result">
+	<result column="date" property="create_Date" javaType="java.sql.Date" jdbcType="DATE" />
+	<result column="text" property="textString" javaType="java.lang.String" jdbcType="VARCHAR" />
+</resultMap>
 	<insert id="insertsc" parameterType="edu.swjtuhc.demo.model.Schedule">
 		insert into schedule
-		(creat_Date,textString)
+		(date,text)
 		values
-		(#{creat_Date},#{textString})
+		(#{create_Date},#{textString})
 	</insert>
-	<select id="selectScheduleBycreate_Date" parameterType="java.sql.Date" resultType="edu.swjtuhc.demo.model.Schedule">
-		select * from schedule
-		where
-		create_Date = #{create_Date}
-	</select>
 </mapper>

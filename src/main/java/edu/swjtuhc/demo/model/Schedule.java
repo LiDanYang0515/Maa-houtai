@@ -6,7 +6,6 @@ public class Schedule {
 	private Date create_Date;
 	private String textString;
 	
-	
 	public Date getCreate_Date() {
 		return create_Date;
 	}

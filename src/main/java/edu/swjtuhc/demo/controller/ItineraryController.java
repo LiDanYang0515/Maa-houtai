@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import edu.swjtuhc.demo.model.Itinerary;
-import edu.swjtuhc.demo.model.Sysuser;
+
 import edu.swjtuhc.demo.service.ItineraryService;
-import edu.swjtuhc.demo.service.UserService;
+
 import net.sf.json.JSONObject;
 
 @RestController
@@ -21,7 +21,7 @@ public class ItineraryController {
 	    public JSONObject addTtripSchedule(@RequestBody Itinerary in) {
 	    	JSONObject result = new JSONObject();
 	    	//调用service层
-	    	int i=itineraryService.addTtripSchedule(in);
+	    	Object i=itineraryService.addTtripSchedule(in);
 	    	result.put("state", i);
 			return result;
 	    }

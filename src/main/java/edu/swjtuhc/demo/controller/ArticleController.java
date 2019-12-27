@@ -20,9 +20,14 @@ public class ArticleController {
 		JSONObject result = new JSONObject();
 		int i=articleService.write(article);
 		result.put("state", i);
+		return result;				
+	}
+	@RequestMapping("/delWrite")
+	public JSONObject delWrite(@RequestBody Article article) {
+		JSONObject result = new JSONObject();
+		int i=articleService.delWrite(article);
+		result.put("state", i);
 		return result;
-		
-		
 	}
 	
 }

@@ -8,4 +8,6 @@ import edu.swjtuhc.demo.model.Article;
 public interface ArticleMapper {
 	//插入数据
 	public int insertArticle(Article article);
+	//删除数据
+	public int deleteArticle(Article articleID);
 }

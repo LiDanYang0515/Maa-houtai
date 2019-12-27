@@ -13,5 +13,10 @@
 		values
 		(#{articleContent})
 	</insert>
+	<delete id=deleteArticle parameterType="edu.swjtuhc.demo.model.Article">
+		DELETE FROM article
+		WHERE
+		articleID=#{articleID}
+	</delete>
 
 </mapper>

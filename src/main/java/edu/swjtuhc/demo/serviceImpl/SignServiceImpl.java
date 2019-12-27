@@ -15,13 +15,13 @@ public class SignServiceImpl implements SignService{
 @Override
 public int write(Sign sign) {
 	// TODO Auto-generated method stub
-	Sign sign2 = new Sign();
 	int i = -1;
-	if (sign==null||"".equals(sign)) {
-		i = 2; 
-	}else {
-		i = signMapper.insertSign(sign);
-	}
+	i = signMapper.insertSign(sign);
+//	if (sign2==null){
+//		i = signMapper.insertSign(sign);
+//	}else {
+//		i = 2;
+//	}
 	return i;
 }
    

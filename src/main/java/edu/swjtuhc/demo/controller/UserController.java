@@ -20,7 +20,8 @@ import edu.swjtuhc.demo.service.UserService;
 import net.sf.json.JSONObject;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping(
+		"/user")
 public class UserController {
     @Autowired
     UserService userService;

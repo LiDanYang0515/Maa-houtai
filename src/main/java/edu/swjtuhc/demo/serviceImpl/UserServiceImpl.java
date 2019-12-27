@@ -35,13 +35,11 @@ public int login(Sysuser user) {
 	int i = -1;
 	if (u1==user){
 		i = userMapper.loginUser(user);
-	}else if (user.getUsername()==null||user.getPassword()==null) {
+	}else if (u1.getUsername()==null||u1.getPassword()==null) {
 		i= 2;
 	}else {
 		i=3;
 	}
 	return i;
 }
-
-
 }

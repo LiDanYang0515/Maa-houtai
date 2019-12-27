@@ -6,7 +6,7 @@ public class Sysuser {
 	private int userId;
 	private String username;
 	private String password;
-	private String name;
+	private String email;
 	private String gender;
 	private int age;
 	
@@ -33,12 +33,19 @@ public class Sysuser {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getName() {
-		return name;
+	
+	public String getEmail() {
+		return email;
 	}
-	public void setName(String name) {
-		this.name = name;
+
+
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
+
+
+
 	public int getAge() {
 		return age;
 	}
@@ -56,9 +63,13 @@ public class Sysuser {
 
 	@Override
 	public String toString() {
-		return "Sysuser [userId=" + userId + ", username=" + username + ", password=" + password + ", name=" + name
+		return "Sysuser [userId=" + userId + ", username=" + username + ", password=" + password + ", email=" + email
 				+ ", gender=" + gender + ", age=" + age + "]";
 	}
+
+
+
+	
 	
 }
 

@@ -1,5 +1,7 @@
 package edu.swjtuhc.demo.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,5 +25,10 @@ public class ScheduleController {
 	    	int i=scheduleService.addDaliySchedule (sc);
 	    	result.put("state", i);
 			return result;
+	    }
+	    //查看
+	    @RequestMapping("/getlastSchedules")
+	    public List<Schedule> getlastSchedules() {
+	    	return scheduleService.getlastSchedules();
 	    }
 }

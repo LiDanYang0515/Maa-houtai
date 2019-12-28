@@ -18,6 +18,10 @@ public class Schedule {
 	public void setTextString(String textString) {
 		this.textString = textString;
 	}
+	@Override
+	public String toString() {
+		return "Schedule [create_Date=" + create_Date + ", textString=" + textString + "]";
+	}
 	
 	
 }

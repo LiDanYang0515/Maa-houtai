@@ -1,5 +1,7 @@
 package edu.swjtuhc.demo.serviceImpl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,5 +20,11 @@ public int addDaliySchedule(Schedule sc) {
 	return i=scheduleMapper.insertsc(sc);
 	
 	// TODO Auto-generated method stub
+}
+
+@Override
+public List<Schedule> getlastSchedules() {
+	// TODO Auto-generated method stub
+	return scheduleMapper.selectlastSchedules();
 }
 }

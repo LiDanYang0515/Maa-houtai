@@ -3,11 +3,10 @@ package edu.swjtuhc.demo.model;
 public class Sysuser {
 	private int userId;
 	private String username;
+	private String email;
 	private String password;
-	private String name;
 	private String gender;
 	private int age;
-	private String avatar;
 	public int getUserId() {
 		return userId;
 	}
@@ -29,12 +28,7 @@ public class Sysuser {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
+	
 	public int getAge() {
 		return age;
 	}
@@ -48,19 +42,19 @@ public class Sysuser {
 		this.gender = gender;
 	}
 
-	public String getAvatar() {
-		return avatar;
+	public String getEmail() {
+		return email;
 	}
-	public void setAvatar(String avatar) {
-		this.avatar = avatar;
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	@Override
 	public String toString() {
-		return "Sysuser [userId=" + userId + ", username=" + username + ", password=" + password + ", name=" + name
-				+ ", gender=" + gender + ", age=" + age + ", avatar=" + avatar + "]";
+		return "Sysuser [userId=" + userId + ", username=" + username + ", email=" + email + ", password=" + password
+				+ ", gender=" + gender + ", age=" + age + "]";
 	}
-
 	
 	
 }

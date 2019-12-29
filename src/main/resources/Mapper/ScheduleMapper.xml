@@ -13,5 +13,7 @@
 		values
 		(#{create_Date},#{textString})
 	</insert>
-	<select id="selectlastSchedules" resultMap=""></select>
+	<select id="selectlastSchedules" parameterType="java.lang.String" resultType="edu.swjtuhc.demo.model.Schedule">
+	
+	</select>
 </mapper>

@@ -2,25 +2,20 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="edu.swjtuhc.demo.mapper.UserMapper">
+      <mapper namespace="edu.swjtuhc.demo.mapper.UserMapper">
 	<insert id="insertUser" parameterType="edu.swjtuhc.demo.model.Sysuser">
 		insert into sysuser
-		(username,password,email,age,gender)
+		(username,password,name,age,gender)
 		values
-		(#{username},#{password},#{email},#{age},#{gender})
+		(#{username},#{password},#{name},#{age},#{gender})
 	</insert>
 	
-	<select id="findByusername" parameterType="java.lang.String" resultType="edu.swjtuhc.demo.model.Sysuser">
+	<select id="selectByusername" parameterType="java.lang.String" resultType="edu.swjtuhc.demo.model.Sysuser">
 		select * from sysuser
 		where
 		username = #{username}
 	
 	</select>
-    <select id="findByusernameAndpassword" parameterType="java.lang.String" resultType="edu.swjtuhc.demo.model.Sysuser">
-		select * from sysuser
-		where
-		username = #{username} AND password = #{password}
-	
-	</select>
+
 
 </mapper>

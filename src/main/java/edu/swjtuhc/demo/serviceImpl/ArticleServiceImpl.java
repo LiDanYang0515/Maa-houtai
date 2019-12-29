@@ -1,5 +1,7 @@
 package edu.swjtuhc.demo.serviceImpl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,10 +26,12 @@ public class ArticleServiceImpl implements ArticleService {
 		return i;
 		
 	}
-	public int delWrite(Article articleID) {
-		int i = -1;
-		i=articleMapper.deleteArticle(articleID);
-		// TODO Auto-generated method stub
-		return i;
+	public int delWrite(Integer articleID) {
+		
+		return articleMapper.deleteArticle(articleID);
+		
 	}
+	public List<Article> getWrite(Article article) {
+		return articleMapper.findArticleByuserID();		
+	} 
 }

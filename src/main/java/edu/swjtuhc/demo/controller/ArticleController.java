@@ -1,5 +1,7 @@
 package edu.swjtuhc.demo.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,10 +25,16 @@ public class ArticleController {
 		return result;				
 	}
 	@RequestMapping("/delWrite")
-	public JSONObject delWrite(@RequestBody Article article) {
+	public JSONObject delWrite(@RequestBody Integer articleID) {
 		JSONObject result = new JSONObject();
-		int i=articleService.delWrite(article);
+		int i=articleService.delWrite(articleID);
 		result.put("state", i);
+		return result;
+	}
+	@RequestMapping("/getWrite")
+	public JSONObject getWrite(@RequestBody Article article) {
+		JSONObject result = new JSONObject();
+		List<Article> resulet = articleService.getWrite(article);
 		return result;
 	}
 	

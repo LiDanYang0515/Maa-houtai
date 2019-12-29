@@ -14,6 +14,8 @@ public interface ArticleService {
 	//插入数据
 	public int write(Article article);
     //删除数据
-	public int delWrite(Article article);
+	public int delWrite(Integer articleID);
+	//查找数据
+	public List<Article> getWrite(Article article);
 }
 

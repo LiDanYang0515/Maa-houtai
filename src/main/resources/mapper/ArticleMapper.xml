@@ -13,10 +13,17 @@
 		values
 		(#{articleContent})
 	</insert>
-	<delete id=deleteArticle parameterType="edu.swjtuhc.demo.model.Article">
+	<delete id="deleteArticle" parameterType="edu.swjtuhc.demo.model.Article">
 		DELETE FROM article
 		WHERE
 		articleID=#{articleID}
 	</delete>
+	<select id="getWrite" parameterType="edu.swjtuhc.demo.model.Article">
+		SELECT
+		*
+		FROM article
+		WHERE
+		userID=#{articleID}
+	</select>
 
 </mapper>

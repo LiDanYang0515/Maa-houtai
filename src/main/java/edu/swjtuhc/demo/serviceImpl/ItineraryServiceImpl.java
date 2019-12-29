@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import edu.swjtuhc.demo.mapper.ItineraryMapper;
-import edu.swjtuhc.demo.mapper.ScheduleMapper;
 import edu.swjtuhc.demo.model.Itinerary;
 import edu.swjtuhc.demo.service.ItineraryService;
 

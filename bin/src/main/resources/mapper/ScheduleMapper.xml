@@ -13,4 +13,5 @@
 		values
 		(#{create_Date},#{textString})
 	</insert>
+	<select id="selectlastSchedules" resultMap=""></select>
 </mapper>

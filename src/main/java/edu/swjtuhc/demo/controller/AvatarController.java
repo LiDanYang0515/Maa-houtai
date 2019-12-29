@@ -14,7 +14,7 @@ import net.sf.json.JSONObject;
 
 @RestController
 @RequestMapping("/avatar")
-public class avatarController {
+public class AvatarController {
 	@Autowired
 	AvatarService avatarService;
 

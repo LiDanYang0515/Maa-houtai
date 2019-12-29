@@ -13,5 +13,7 @@
 		values
 		(#{create_Date},#{textString})
 	</insert>
-	<select id="selectlastSchedules" resultMap=""></select>
+	<select id="selectlastSchedules" resultMap="schedule_result">
+		select * from schedule
+	</select>
 </mapper>

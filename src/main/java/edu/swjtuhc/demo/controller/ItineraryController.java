@@ -14,7 +14,7 @@ import net.sf.json.JSONObject;
 public class ItineraryController {
 	 @Autowired
 	 ItineraryService itineraryService;
-	 @RequestMapping("/addTrip")
+	 @RequestMapping("/addTripItinerary")
 	    public JSONObject addTripItinerary(@RequestBody Itinerary in) {
 	    	
 	    	JSONObject result = new JSONObject();

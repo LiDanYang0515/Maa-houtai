@@ -3,13 +3,14 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="edu.swjtuhc.demo.mapper.ItineraryMapper">
 <resultMap type="edu.swjtuhc.demo.model.Itinerary" id="itinerary_result">
-	<result column="date" property="create_Date" javaType="java.sql.Date" jdbcType="DATE" />
-	<result column="text" property="textString" javaType="java.lang.String" jdbcType="VARCHAR" />
+	<id column="T_id" property="T_ID" javaType="java.lang.Integer" jdbcType="INTEGER" />
+	<result column="date" property="date" javaType="java.sql.Date" jdbcType="DATE" />
+	<result column="text" property="text" javaType="java.lang.String" jdbcType="VARCHAR" />
 </resultMap>
 	<insert id="insertin" parameterType="edu.swjtuhc.demo.model.Itinerary">
 		insert into itinerary
 		(date,text)
 		values
-		(#{create_Date},#{textString})
+		(#{date},#{text})
 	</insert>
 </mapper>

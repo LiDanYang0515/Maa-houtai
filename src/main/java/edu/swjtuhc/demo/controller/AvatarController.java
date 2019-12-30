@@ -17,13 +17,6 @@ import net.sf.json.JSONObject;
 public class AvatarController {
 	@Autowired
 	AvatarService avatarService;
-
-	// 获取表
-	@RequestMapping("/getlist")
-	public List<Avatar> getList() {
-		return avatarService.getAvatarList();
-	}
-
 	@RequestMapping("/file")
 	public JSONObject avatar(Avatar avatar, MultipartFile file) {
 		JSONObject result = new JSONObject();

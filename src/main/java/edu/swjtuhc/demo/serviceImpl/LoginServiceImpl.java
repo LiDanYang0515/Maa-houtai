@@ -14,13 +14,12 @@ public class LoginServiceImpl implements LoginService{
 	@Override
 	public int login(Login user) {
 		// TODO Auto-generated method stub
-		loginMapper.selectByusername(user.getUsername());
-		Sysuser u = new Sysuser();
-		Sysuser p = new Sysuser();
+		Login u = loginMapper.selectByusername(user.getUsername());
+		Login p = loginMapper.selectBypassword(user.getPassword());
 		int i = -1;
-		if(u==null&&p==null){
+		if(u==null||u.equals(user.getUsername())){
 			i = 3;
-       }else if (u.equals(user.getUsername())||p.equals(user.getPassword())) {
+       }else if (p==null||p.equals(user.getPassword())) {
 			i = 2;
 		}else {
 			i = 1;

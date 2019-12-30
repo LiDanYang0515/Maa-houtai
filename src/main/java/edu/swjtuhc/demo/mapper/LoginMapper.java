@@ -8,5 +8,6 @@ import edu.swjtuhc.demo.model.Sysuser;
 @Mapper
 public interface LoginMapper {
 	public Login selectByusername(String username);
+	public Login selectBypassword(String password);
 	
 }

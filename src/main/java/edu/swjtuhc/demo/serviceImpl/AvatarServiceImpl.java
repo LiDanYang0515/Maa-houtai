@@ -19,10 +19,7 @@ import edu.swjtuhc.demo.service.AvatarService;
 public class AvatarServiceImpl implements AvatarService {
 @Autowired
 AvatarMapper avatarMapper;
-public List<Avatar> getAvatarList(){
-	
-	return avatarMapper.selectAllAvatars();
-}
+
 @Override
 public int avatar( Avatar avatar, InputStream fileStream) {
 	// TODO Auto-generated method stub

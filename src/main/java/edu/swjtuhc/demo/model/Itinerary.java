@@ -3,23 +3,31 @@ package edu.swjtuhc.demo.model;
 import java.sql.Date;
 
 public class Itinerary {
-	private Date create_Date;
-	private String textString;
-	public Date getCreate_Date() {
-		return create_Date;
+	private int T_ID;
+	private Date date;
+	private String text;
+	
+	public int getT_ID() {
+		return T_ID;
 	}
-	public void setCreate_Date(Date create_Date) {
-		this.create_Date = create_Date;
+	public void setT_ID(int t_ID) {
+		T_ID = t_ID;
 	}
-	public String getTextString() {
-		return textString;
+	public Date getDate() {
+		return date;
 	}
-	public void setTextString(String textString) {
-		this.textString = textString;
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	public String getText() {
+		return text;
+	}
+	public void setText(String text) {
+		this.text = text;
 	}
 	@Override
 	public String toString() {
-		return "Itinerary [create_Date=" + create_Date + ", textString=" + textString + "]";
+		return "Itinerary [T_ID=" + T_ID + ", date=" + date + ", text=" + text + "]";
 	}
 	
 }

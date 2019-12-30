@@ -12,5 +12,10 @@
 		where
 		Username = #{username}
 	</select>
+	<select id="selectBypassword" parameterType="java.lang.String" resultType="edu.swjtuhc.demo.model.Login">
+		select * from sysuser
+		where
+		Password = #{password}
+	</select>
 	
 		</mapper>

@@ -5,14 +5,14 @@
         <mapper namespace="edu.swjtuhc.demo.mapper.LoginMapper">
         <resultMap type="edu.swjtuhc.demo.model.Login" id="login_result">		
 		<result column="Username" property="username" javaType="java.lang.String" jdbcType="VARCHAR" />
-		<result column="Password" property="password" javaType="java.lang.Integer" jdbcType="INTEGER" />
+		<result column="Password" property="password" javaType="java.lang.String" jdbcType="VARCHAR" />
 	</resultMap>
-     <select id="selectByusername" parameterType="java.lang.String" resultType="edu.swjtuhc.demo.model.Login">
+     <select id="selectByusername" resultMap="login_result">
 		select * from sysuser
 		where
 		Username = #{username}
 	</select>
-	<select id="selectBypassword" parameterType="java.lang.String" resultType="edu.swjtuhc.demo.model.Login">
+	<select id="selectBypassword" resultMap="login_result">
 		select * from sysuser
 		where
 		Password = #{password}

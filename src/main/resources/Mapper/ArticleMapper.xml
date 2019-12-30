@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.swjtuhc.demo.mapper.ArticleMapper">
+<resultMap type="edu.swjtuhc.demo.model.Article" id="article_result">
+		<id column="userID" property="userID" javaType="java.lang.Integer" jdbcType="INTEGER" />
+		<result column="articleContent" property="articleContent" javaType="java.lang.String" jdbcType="VARCHAR" />
+	</resultMap>
+	<insert id="insertArticle" parameterType="edu.swjtuhc.demo.model.Article">
+		insert into article
+		(articleContent)
+		values
+		(#{articleContent})
+	</insert>
+	<delete id="deleteArticle" parameterType="edu.swjtuhc.demo.model.Article">
+		DELETE FROM article
+		WHERE
+		articleID=#{articleID}
+	</delete>
+	<select id="getWrite" parameterType="edu.swjtuhc.demo.model.Article">
+		SELECT
+		*
+		FROM article
+		WHERE
+		userID=#{articleID}
+	</select>
+
+</mapper>

@@ -8,12 +8,12 @@
 	<result column="text" property="textString" javaType="java.lang.String" jdbcType="VARCHAR" />
 </resultMap>
 	<insert id="insertsc" parameterType="edu.swjtuhc.demo.model.Schedule">
-		insert into schedule
+		insert into dailyshedule
 		(date,text)
 		values
 		(#{create_Date},#{textString})
 	</insert>
 	<select id="selectlastSchedules" resultMap="schedule_result">
-		select * from schedule
+		select * from dailyshedule
 	</select>
 </mapper>

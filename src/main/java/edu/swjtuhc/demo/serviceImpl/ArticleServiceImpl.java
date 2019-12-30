@@ -26,12 +26,17 @@ public class ArticleServiceImpl implements ArticleService {
 		return i;
 		
 	}
-	public int delWrite(Integer articleID) {
+
+	@Override
+	public int delWrite(int articleID) {
 		
+		// TODO Auto-generated method stub
 		return articleMapper.deleteArticle(articleID);
-		
 	}
-	public List<Article> getWrite(Article article) {
-		return articleMapper.findArticleByuserID();		
+
+	@Override
+	public List<Article> getWrite() {
+		// TODO Auto-generated method stub
+		return articleMapper.selectArticles();
 	} 
 }

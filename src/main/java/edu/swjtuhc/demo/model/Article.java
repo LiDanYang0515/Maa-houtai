@@ -1,14 +1,14 @@
 package edu.swjtuhc.demo.model;
 
 public class Article {
-	private String articleConcent;
+	private String articleContent;
 	private int articleID;
-	private int username;
-	public String getArticleConcent() {
-		return articleConcent;
+	
+	public String getArticleContent() {
+		return articleContent;
 	}
-	public void setArticleConcent(String articleConcent) {
-		this.articleConcent = articleConcent;
+	public void setArticleContent(String articleContent) {
+		this.articleContent = articleContent;
 	}
 	public int getArticleID() {
 		return articleID;
@@ -16,16 +16,9 @@ public class Article {
 	public void setArticleID(int articleID) {
 		this.articleID = articleID;
 	}
-	public int getUsername() {
-		return username;
-	}
-	public void setUsername(int username) {
-		this.username = username;
-	}
 	@Override
 	public String toString() {
-		return "Article [articleConcent=" + articleConcent + ", articleID=" + articleID + ", username=" + username
-				+ "]";
+		return "Article [articleContent=" + articleContent + ", articleID=" + articleID + "]";
 	}
 	
 }

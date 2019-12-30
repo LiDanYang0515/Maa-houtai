@@ -11,9 +11,9 @@ public interface ArticleMapper {
 	//插入数据
 	public int insertArticle(Article article);
 	//删除数据
-	public int deleteArticle(Integer articleID);
+	public int deleteArticle(int i);
 	//查看数据
 	
-	public List<Article> findArticleByuserID();
+	public List<Article> selectArticles();
 	
 }

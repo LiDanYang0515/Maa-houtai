@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import edu.swjtuhc.demo.model.Article;
+import edu.swjtuhc.demo.model.Schedule;
 import edu.swjtuhc.demo.service.ArticleService;
 import net.sf.json.JSONObject;
 
@@ -25,17 +26,15 @@ public class ArticleController {
 		return result;				
 	}
 	@RequestMapping("/delWrite")
-	public JSONObject delWrite(@RequestBody Integer articleID) {
+	public JSONObject delWrite(@RequestBody Article article) {
 		JSONObject result = new JSONObject();
-		int i=articleService.delWrite(articleID);
+		int i=articleService.delWrite(article.getArticleID());
 		result.put("state", i);
 		return result;
 	}
-	@RequestMapping("/getWrite")
-	public JSONObject getWrite(@RequestBody Article article) {
-		JSONObject result = new JSONObject();
-		List<Article> resulet = articleService.getWrite(article);
-		return result;
-	}
+	 @RequestMapping("/getWrite")
+	    public List<Article> getlastSchedules() {
+	    	return articleService.getWrite();
+	    }
 	
 }

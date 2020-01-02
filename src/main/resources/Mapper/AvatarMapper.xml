@@ -5,15 +5,12 @@
 <mapper namespace="edu.swjtuhc.demo.mapper.AvatarMapper">
 	<resultMap type="edu.swjtuhc.demo.model.Avatar" id="avatar_result">
 		<id column="A_Id" property="A_Id" javaType="java.lang.Integer" jdbcType="INTEGER" />
-		<result column="ava" property="avatar" javaType="java.lang.String" jdbcType="VARCHAR" />
+		<result column="avatar" property="avatar" javaType="java.lang.String" jdbcType="VARCHAR" />
 	</resultMap>
 	<insert id = "insertAvatar" parameterType = "edu.swjtuhc.demo.model.Avatar">
 	insert into avatar
-	(ava)
+	(avatar)
 	values
-	(#{avatar});
+	(#{avatar})
 	</insert>
-	<select id = "selectAllAvatars" resultMap="avatar_result">
-	  select * from avatar
-	</select>
 </mapper>

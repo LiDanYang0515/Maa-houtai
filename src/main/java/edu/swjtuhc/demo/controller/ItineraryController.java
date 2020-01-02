@@ -1,5 +1,7 @@
 package edu.swjtuhc.demo.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,5 +24,9 @@ public class ItineraryController {
 	    	int i=itineraryService.addTripItinerary (in);
 	    	result.put("state", i);
 			return result;
+	    }
+	  @RequestMapping("/getlastItinerary")
+	    public List<Itinerary> getlastItinerary() {
+	    	return itineraryService.getlastItinerary();
 	    }
 }

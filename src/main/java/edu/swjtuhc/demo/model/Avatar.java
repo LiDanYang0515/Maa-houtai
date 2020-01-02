@@ -3,6 +3,7 @@ package edu.swjtuhc.demo.model;
 public class Avatar {
 	private int A_Id;
 	private String avatar;
+	
 	public int getA_Id() {
 		return A_Id;
 	}
